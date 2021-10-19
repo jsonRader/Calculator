@@ -1,0 +1,189 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+  
+html {
+    font-size: 24px;
+    font-family: 'Unica One', cursive;
+}
+  
+#app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 1rem 0;
+}
+  
+#app h1 {
+    font-size: 3rem;
+    margin-left: 16px;
+    letter-spacing: 0.5rem;
+    margin-bottom: 8px;
+    color: #ffffffad;
+    -webkit-text-stroke: 0.25px #3c3b3b; 
+}
+
+video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -100;
+    opacity: 90%;
+}
+
+.calculator {
+    background: #0000003e;
+    display: grid;
+    grid-template-rows: 180px 1fr;
+    height: 773px;
+    width: 465px;
+    box-shadow: 0px 5px 80px 0px #000000;
+    padding: 16px 17px 16px 17px;
+    border-radius: 8px;
+    border: 3.5px solid #545353;
+}
+
+.calculator button {
+    font-family: monaco;
+	font-size: 40px;
+	font-weight: 50;
+	border-radius: 8px;
+	cursor: pointer;
+	box-shadow: rgb(14, 30, 37) 0px 2px 7px 1.5px, rgba(14, 30, 37, 0.372) 0px 2px 16px 0px;
+}
+
+.display {
+	background: #9d9a9a7c;
+	box-shadow: inset 5px 5px 20px -7px black, inset -5px -5px 20px -7px black;
+	display: grid;
+	grid-template-rows: repeat(3, 1fr);
+	grid-template-columns: repeat(5, 1fr);
+	height: 165px;
+	padding: 5px 8px;
+	border: 2px solid #545353;
+	border-radius: 8px;
+	overflow: hidden;
+}
+.held-label {
+	color: #ffffff;
+	-webkit-text-stroke: 1.25px #545353;
+	text-decoration: underline 2px #545353;
+	font-size: 36px;
+	grid-row: 1;
+	grid-column: 1 / 6;
+}
+
+.held-value {
+	font-family: monaco;
+	font-size: 45px;
+	color: #545353;
+	-webkit-text-stroke: 0.9px #39e241;
+	grid-row: 2;
+	grid-column: 1 / 6;
+}
+
+.next-operation {
+	font-family: monaco;
+	color:#39e241;
+	-webkit-text-stroke: 0.9px #545353;
+	font-size: 45px;
+	grid-row: 3;
+	grid-column: 1;
+}
+
+.next-value {
+	font-family: monaco;
+	font-size: 45px;
+	color: #545353;
+	-webkit-text-stroke: 0.9px #39e241;
+	grid-row: 3;
+	grid-column: 2 / 6;
+	text-align: right;
+}
+
+.controls {
+	display: grid;
+	grid-row: 2;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(5, 1fr);
+	grid-gap: 15px;
+}
+
+.memory button{
+	background: #39e241c1;
+	color:#707070;
+	height: 100px;
+	font-size: 25px;
+}
+
+.memory {
+	grid-column: 1 / 4;
+	grid-row: 1;
+	display: grid;
+	grid-template-columns: 2fr 3fr;
+	grid-gap: 13px;
+}
+
+.operations {
+	display: grid;
+	grid-column: 4 / 5;
+	grid-row: 1 / 6;
+	grid-template-rows: repeat(5, 1fr);
+	grid-gap: 13px;
+}
+
+.add {
+	background: #545353d6;
+	color: #39E241;
+}
+
+.subtract {
+	background: #545353d6;
+	color: #39E241;
+}
+
+.multiply {
+	background: #545353d6;
+	color: #39E241;
+}
+
+.divide {
+	background: #545353d6;
+	color: #39E241;
+}
+
+.equals {
+	background: #39e241c1;
+	color: #545353;
+}
+        
+.digits {
+	display: grid;
+	grid-column: 1 / 4;
+	grid-row: 2 / 6;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(4, 2fr);
+	grid-gap: 15px
+}
+
+.decimal {
+	background: #a5adb0;
+}
+
+.digits :last-of-type {
+	grid-column: 2 / 4;
+}
+
+.digits button {
+	background: #a5adb0d2;
+	color: #39E241;
+	-webkit-text-stroke: 1.5px #3c3b3b;
+}
